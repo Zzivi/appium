@@ -1,8 +1,15 @@
 # appium
 
+Run: 
+docker run -i -p 4723:4723 danielviorreta/appium:latest
+
+Stop docker:
+docker ps
+docker stop CONTAINER_ID
+
 Connect via ssh:
 $(boot2docker shellinit 2> /dev/null)
-docker run -i -t isonic1/appium-and-emulator:latest /bin/bash
+docker run -i -t danielviorreta/appium:latest /bin/bash
 
 Start appium:
 /home/automator/appium/node_modules/.bin/appium
