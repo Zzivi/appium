@@ -13,7 +13,8 @@ RUN apt-get -y install nodejs
 RUN apt-get -y install libgl1-mesa-dev
 
 #create user
-RUN useradd -m -s /bin/bash automator
+RUN useradd -m -s /bin/bash automator -G sudo
+RUN echo automator:password | chpasswd
 USER automator
     
 # Main Android SDK in user dir
