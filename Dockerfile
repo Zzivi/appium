@@ -10,6 +10,7 @@ RUN apt-get -y install software-properties-common
 RUN add-apt-repository ppa:chris-lea/node.js
 RUN apt-get update
 RUN apt-get -y install nodejs
+RUN apt-get install libgl1-mesa-dev
 
 #create user
 RUN useradd -m -s /bin/bash automator
